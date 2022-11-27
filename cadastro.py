@@ -18,6 +18,7 @@ def inserir_codigo():
     codigo_str = "COD-{}".format(codigo)
     lista_codigos.append((codigo_str,descricao,tipo,quant,data_criacao))
 
+
 #Título da janela
 
 janela.title('Ferramenta de Cadastro de Materiais')
@@ -40,7 +41,7 @@ label_quant.grid(row=4, column=0, padx= 10, pady=10, sticky='nswe', columnspan =
 entry_quant = tk.Entry(text="Quantidade na unidade de material")
 entry_quant.grid(row=4, column= 2, padx= 10, pady=10, sticky='nswe', columnspan =2 )
 
-botao_criar_codigo = tk.Button(text="Criar Código",command= inserir_codigo())
+botao_criar_codigo = tk.Button(text="Criar Código", command= inserir_codigo)
 botao_criar_codigo.grid(row=5, column= 0, padx= 10, pady=10, sticky='nswe', columnspan =4)
 
 janela.mainloop()
@@ -48,6 +49,6 @@ janela.mainloop()
 
 print(lista_codigos)
 
-#with open("Lista.txt", "w") as arquivo:
-#    lista = arquivo.write(str(lista_codigos))
+with open("Lista.txt", "w") as arquivo:
+    lista = arquivo.write(str(lista_codigos))
 
