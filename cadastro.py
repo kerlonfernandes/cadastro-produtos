@@ -49,6 +49,6 @@ janela.mainloop()
 
 print(lista_codigos)
 
-with open("Lista.txt", "w") as arquivo:
+with open("Lista.txt", "a") as arquivo:
     lista = arquivo.write(str(lista_codigos))
 
